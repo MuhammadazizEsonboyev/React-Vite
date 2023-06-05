@@ -6,8 +6,8 @@ import { postData } from "../../api/postData"
 const Home = () => {
 
   const [name, setName] = useState("")
-  const postDataUsers = () => {
-    postData("http://localhost:3000/data", {
+  const postDataUsers = async () => {
+    await postData("https://demo-vite.onrender.com/data", {
       name: name
     }).then((res) => {
       alert(res?.statusText);

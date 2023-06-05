@@ -4,8 +4,8 @@ import { getProduct } from "../../api/getProduct"
 const Product = () => {
   const [data, setData] = useState([])
 
-  const getData = () => {
-    getProduct("http://localhost:3000/data").then((res) => {
+  const getData = async () => {
+    await getProduct("https://demo-vite.onrender.com/data").then((res) => {
       setData(res?.data)
     })
   }
